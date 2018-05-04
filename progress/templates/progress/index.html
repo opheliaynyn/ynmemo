@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+  <title>しんちょくあっぷ</title>
+</head>
+<body>
+  <div>
+    <button type="button" class="btn btn-primary" onclick="location.href='{% url 'social:begin' 'twitter' %}?next={{ request.path }}'">Login</button>
+  </div>
+  <br></br>
+  <p>{{ request.user.username }}</p>
+  <p>{{ request.user.last_login }}</p>
+  <br></br>
+</body>
+</html>

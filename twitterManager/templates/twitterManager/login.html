@@ -1,0 +1,13 @@
+<html>
+<head>
+ <title>ログイン</title>
+</head>
+<body>
+  <div>
+    <button type="button" onclick="location.href='{% url 'social:begin' 'twitter' %}?next={{ request.path }}'">ログイン</button>
+  </div>
+  <br></br>
+  <p>{{ request.user.username }}</p>
+  <br></br>
+</body>
+</html>
