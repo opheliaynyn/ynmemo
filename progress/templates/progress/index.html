@@ -7,9 +7,13 @@
   <div>
     <button type="button" class="btn btn-primary" onclick="location.href='{% url 'social:begin' 'twitter' %}?next={{ request.path }}'">Login</button>
   </div>
-  <br></br>
+  <br />
   <p>{{ request.user.username }}</p>
   <p>{{ request.user.last_login }}</p>
-  <br></br>
+  <p>UserId:{{ user.access_token.user_id }}</p>
+  <p>OAuthTokenSecret:{{ user.access_token.oauth_token_secret }}</p>
+  <p>OAuthToken:{{ user.access_token.oauth_token }}</p>
+  <p>ScreenName:{{ user.access_token.screen_name }}</p>
+  <br />
 </body>
 </html>
